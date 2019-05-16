@@ -39,7 +39,7 @@ public class Main {
     public static int cutHorizontally(int startY, int endY, int startX, int endX) {
         int horizontalCutting = 0;
 
-        if (isEmptySlate(startY, endY, startX, endX, "Horizontal")) {
+        if (isEmptySlate(startY, endY, startX, endX)) {
             return 1;
         }
 
@@ -69,7 +69,7 @@ public class Main {
     public static int cutVertically(int startY, int endY, int startX, int endX) {
         int verticalCutting = 0;
 
-        if (isEmptySlate(startY, endY, startX, endX, "Vertical")) {
+        if (isEmptySlate(startY, endY, startX, endX)) {
             return 1;
         }
 
@@ -95,7 +95,7 @@ public class Main {
         return verticalCutting;
     }
 
-    private static boolean isEmptySlate(int startY, int endY, int startX, int endX, String direction) {
+    private static boolean isEmptySlate(int startY, int endY, int startX, int endX) {
         return (startX > endX) || (startY > endY);
     }
 
@@ -174,4 +174,3 @@ public class Main {
         }
     }
 }
-
